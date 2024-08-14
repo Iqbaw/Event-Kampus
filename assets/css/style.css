@@ -662,31 +662,24 @@ ol[type="1"] > li:not(:last-child) {
 
 .tags_list {
   margin: -10px;
+
 }
 .tags_list > li {
-  padding: 10px;
-}
-.tags_list a {
+  padding: 12px 16px;
   display: block;
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
   color: #1F1D0D;
-  padding: 12px 16px;
   text-transform: uppercase;
   font-family: "Barlow", sans-serif;
   border-radius: 8px;
   background-color: #ffffff;
+  margin-bottom: 10px; /* Add this line to create space between items */
 }
-.tags_list a:hover {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
-  -webkit-box-shadow: 3px 3px 0 0 #1F1D0D;
-          box-shadow: 3px 3px 0 0 #1F1D0D;
-}
-.tags_list.style_2 a {
-  background-color: #F6F6F6;
-}
+
+  
+
 
 .item_category_list {
   overflow: hidden;
