@@ -59,7 +59,7 @@
             <div class="col col-lg-3 col-5">
               <div class="site_logo">
                 <a class="site_link" href="index_2.html">
-                  <img src="assets/images/logo/site_logo.svg" alt="Collab - Online Learning Platform">
+                  <img src="assets/images/logo/site_logo-01.png" alt="">
                 </a>
               </div>
             </div>
@@ -109,32 +109,7 @@
                   </ul>
                 </div>
               </nav>
-            </div>
-            <div class="col col-lg-3 col-5">
-              <ul class="header_btns_group unordered_list_end">
-                <li>
-                  <button class="mobile_menu_btn" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu_dropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="far fa-bars"></i>
-                  </button>
-                </li>
-                <li>
-                  <a class="btn border_dark" href="login.html">
-                    <span>
-                      <small>Login</small>
-                      <small>Login</small>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="btn btn_dark" href="signup.html">
-                    <span>
-                      <small>Sign Up</small>
-                      <small>Sign Up</small>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            </div>  
           </div>
         </div>
       </header>
@@ -251,7 +226,7 @@
               </div>
             </div>
 
-            <form action="#">
+            <form id="my-form" action="https://formspree.io/f/mgvwvyoy" method="POST">
               <div class="row justify-content-center">
                 <div class="col col-lg-8">
                   <div class="row">
@@ -366,39 +341,7 @@
         <!-- Brands Section - End
         ================================================== -->
 
-        <!-- Newslatter Section - Start
-        ================================================== -->
-        <section class="newslatter_section">
-          <div class="container">
-            <div class="newslatter_box" style="background-image: url('assets/images/shape/shape_img_6.svg');">
-              <div class="row justify-content-center">
-                <div class="col col-lg-6">
-                  <div class="section_heading text-center">
-                    <h2 class="heading_text">
-                      Subscribe Now Forget 20% Discount Every Courses
-                    </h2>
-                    <p class="heading_description mb-0">
-                      Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed magna purus, fermentum eu
-                    </p>
-                  </div>
-                  <form action="#">
-                    <div class="form_item m-0">
-                      <input type="email" name="email" placeholder="Your Email">
-                      <button type="submit" class="btn btn_dark">
-                        <span>
-                          <small>Subsctibe</small>
-                          <small>Subsctibe</small>
-                        </span>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Newslatter Section - End
-        ================================================== -->
+        
 
       </main>
       <!-- Main Body - End
@@ -630,6 +573,32 @@
 
     <!-- Custom - Jquery Include -->
     <script src="assets/js/main.js"></script>
+    <script>
+    
+      var form = document.getElementById("my-form");
+      async function handleSubmit(event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+          'Accept': 'application/json'
+          }
+      }).then(response => {
+          // Setelah formulir berhasil dikirim, refresh halaman
+          location.reload();
+      }).catch(error => {
+          // Jika ada kesalahan, Anda masih dapat memilih untuk merefresh halaman atau menampilkan pesan kesalahan
+          location.reload();
+      });
+      }
+  
+      form.addEventListener("submit", handleSubmit);
+  
+  
+
+  </script>
 
   </body>
 </html>
