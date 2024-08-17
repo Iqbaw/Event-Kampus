@@ -682,6 +682,7 @@ ol[type="1"] > li:not(:last-child) {
   border-radius: 8px;
   background-color: #ffffff;
   margin-bottom: 10px; /* Add this line to create space between items */
+  gap : 10px;
 }
 
   
