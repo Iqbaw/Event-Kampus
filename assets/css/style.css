@@ -76,6 +76,9 @@
 ================================================== */
 /* 1.2 - Template Global Reset - Start
 ================================================== */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -88,6 +91,7 @@ body {
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 .page_wrapper {
@@ -1893,7 +1897,7 @@ blockquote p {
   padding: 152px 0 160px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #FFD32B;
+  background-color: #ffd302;
   background-position: center center;
 }
 .hero_banner.style_2 .banner_big_title {
@@ -1901,7 +1905,7 @@ blockquote p {
 }
 .hero_banner.style_2 .banner_big_title,
 .hero_banner.style_2 .banner_description {
-  color: #1F1D0D;
+  color: #232323;
 }
 .hero_banner.style_2 .banner_description {
   max-width: 500px;
