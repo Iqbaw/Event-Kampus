@@ -3039,7 +3039,7 @@ blockquote p {
   padding: 15px;
 }
 .brands_logo_list a {
-  padding: 30px;
+  padding: 100px;
   height: 152px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3055,8 +3055,8 @@ blockquote p {
   background-color: #F6F6F6;
 }
 .brands_logo_list a img {
-  max-width: 180px;
-  max-height: 70px;
+  max-width: 250px;
+  max-height: 370px;
 }
 .brands_logo_list a:hover {
   border-color: #1F1D0D;
