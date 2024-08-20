@@ -3039,8 +3039,9 @@ blockquote p {
   padding: 15px;
 }
 .brands_logo_list a {
-  padding: 100px;
+  padding: 20px;
   height: 152px;
+  width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3055,7 +3056,7 @@ blockquote p {
   background-color: #F6F6F6;
 }
 .brands_logo_list a img {
-  max-width: 250px;
+  max-width: 170px;
   max-height: 370px;
 }
 .brands_logo_list a:hover {
@@ -4385,8 +4386,8 @@ Responsive For Mobile & Tablet Devices
     width: 33.333%;
   }
   .brands_logo_list a img {
-    max-width: 140px;
-    max-height: 60px;
+    max-width: 190px;
+    max-height: 260px;
   }
   .form_item:has(.btn) {
     margin-bottom: 30px;
@@ -4762,8 +4763,8 @@ Responsive For Mobile & Tablet Devices
     padding: 62px 30px 60px;
   }
   .brands_logo_list a img {
-    max-width: 120px;
-    max-height: 50px;
+    max-width: 170px;
+    max-height: 140px;
   }
   .brands_logo_list a {
     height: 130px;
