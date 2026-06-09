@@ -22,38 +22,104 @@
     /* Hide old elements */
     .site_header, .site_footer { display: none !important; }
 
-    /* Page Hero Banner */
+    /* ============================================
+       PAGE HERO - PREMIUM
+       ============================================ */
     .page-hero {
       background: #ffd302;
-      padding: 140px 0 80px;
+      background-image: url('assets/images/shape/shape_img_6.svg');
+      background-size: cover;
+      background-position: center;
+      padding: 160px 0 100px;
       position: relative;
       overflow: hidden;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
     }
 
     .page-hero::before {
       content: '';
       position: absolute;
-      top: -40%;
-      right: -15%;
-      width: 60%;
-      height: 140%;
-      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+      top: -50%;
+      right: -20%;
+      width: 70%;
+      height: 160%;
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.2) 0%, transparent 65%);
       border-radius: 50%;
+      animation: heroGlowPage 8s ease-in-out infinite alternate;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -10%;
+      width: 50%;
+      height: 120%;
+      background: radial-gradient(ellipse, rgba(244, 162, 97, 0.08) 0%, transparent 65%);
+      border-radius: 50%;
+      animation: heroGlowPage 10s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes heroGlowPage {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+      100% { transform: translate(15px, -15px) scale(1.05); opacity: 1; }
+    }
+
+    /* Decorative floating shapes */
+    .page-hero .deco-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      background: var(--dark);
+    }
+
+    .page-hero .deco-shape-1 {
+      width: 180px;
+      height: 180px;
+      top: 10%;
+      right: 8%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .page-hero .deco-shape-2 {
+      width: 80px;
+      height: 80px;
+      bottom: 15%;
+      left: 5%;
+      animation: float 5s ease-in-out infinite 1s;
+    }
+
+    .page-hero .deco-shape-3 {
+      width: 40px;
+      height: 40px;
+      top: 30%;
+      left: 15%;
+      animation: float 4s ease-in-out infinite 0.5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
     }
 
     .page-hero .breadcrumb-nav {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       font-size: 14px;
+      position: relative;
+      z-index: 3;
     }
 
     .page-hero .breadcrumb-nav a {
       color: var(--dark);
       text-decoration: none;
-      opacity: 0.7;
-      transition: opacity 0.3s;
+      opacity: 0.6;
+      transition: all 0.3s;
+      font-weight: 500;
     }
 
     .page-hero .breadcrumb-nav a:hover {
@@ -61,40 +127,185 @@
     }
 
     .page-hero .breadcrumb-nav .separator {
-      opacity: 0.4;
+      opacity: 0.35;
+      font-size: 10px;
     }
 
     .page-hero .breadcrumb-nav .current {
       font-weight: 600;
       color: var(--dark);
+      opacity: 1;
+    }
+
+    .page-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(31, 29, 13, 0.07);
+      border: 1px solid rgba(31, 29, 13, 0.12);
+      border-radius: 50px;
+      padding: 8px 18px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .page-hero .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dark);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .page-hero .hero-badge span {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--dark);
     }
 
     .page-hero .page-title {
       font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(3rem, 6vw, 4.5rem);
       font-weight: 800;
       color: var(--dark);
-      margin-bottom: 16px;
-      line-height: 1.1;
+      margin-bottom: 20px;
+      line-height: 1.05;
+      position: relative;
+      z-index: 3;
+    }
+
+    .page-hero .page-title .accent {
+      display: block;
+      font-size: 0.55em;
+      font-weight: 600;
+      opacity: 0.6;
+      margin-top: 8px;
     }
 
     .page-hero .page-desc {
       font-size: 16px;
       color: rgba(31, 29, 13, 0.7);
-      max-width: 500px;
-      line-height: 1.7;
+      max-width: 480px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 3;
+      margin-bottom: 32px;
     }
 
-    .page-hero .hero-image {
+    .page-hero .hero-stats {
+      display: flex;
+      gap: 32px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .page-hero .stat-item {
+      text-align: left;
+    }
+
+    .page-hero .stat-number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .page-hero .stat-label {
+      font-size: 13px;
+      color: rgba(31, 29, 13, 0.6);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Hero Image - Large, Floating, Interactive */
+    .page-hero .hero-image-wrap {
       position: relative;
       z-index: 2;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .page-hero .hero-image img {
-      max-width: 320px;
+    .page-hero .hero-img-container {
+      position: relative;
       width: 100%;
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .page-hero .hero-img-main {
+      width: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 
+        0 30px 60px rgba(31, 29, 13, 0.15),
+        0 10px 20px rgba(31, 29, 13, 0.08);
+      transition: transform 0.3s var(--transition-smooth);
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 3px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .page-hero .hero-img-main img {
+      width: 100%;
+      display: block;
+      border-radius: 29px;
+    }
+
+    .page-hero .hero-img-main:hover {
+      transform: scale(1.02) rotate(0.5deg);
+    }
+
+    /* Floating decorative cards around the image */
+    .page-hero .float-card {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 30px rgba(31, 29, 13, 0.08);
+      z-index: 5;
+    }
+
+    .page-hero .float-card-1 {
+      top: -10px;
+      right: -30px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .page-hero .float-card-2 {
+      bottom: 30px;
+      left: -35px;
+      animation: float 5s ease-in-out infinite 1.5s;
+    }
+
+    .page-hero .float-card .fc-icon {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .page-hero .float-card .fc-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--dark);
+      white-space: nowrap;
+    }
+
+    .page-hero .float-card .fc-sub {
+      font-size: 11px;
+      color: rgba(31, 29, 13, 0.5);
     }
 
     /* Filter Bar */
@@ -389,23 +600,63 @@
   </nav>
 
   <!-- ============================================
-       PAGE HERO
+       PAGE HERO - PREMIUM
        ============================================ -->
   <section class="page-hero">
+    <!-- Decorative shapes -->
+    <div class="deco-shape deco-shape-1"></div>
+    <div class="deco-shape deco-shape-2"></div>
+    <div class="deco-shape deco-shape-3"></div>
+
     <div class="container-custom">
       <div class="row align-items-center">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <div class="breadcrumb-nav">
             <a href="index_2.html">Home</a>
-            <span class="separator"><i class="fas fa-chevron-right" style="font-size:10px;"></i></span>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
             <span class="current">Semua Lomba</span>
           </div>
-          <h1 class="page-title">Semua Lomba</h1>
-          <p class="page-desc">Jelajahi 7 kategori lomba Deutsche Woche XXVIII. Pilih sesuai jenjangmu dan tunjukkan kemampuan terbaikmu!</p>
+          <div class="hero-badge">
+            <span class="dot"></span>
+            <span>7 Kategori Kompetisi</span>
+          </div>
+          <h1 class="page-title">
+            Semua Lomba
+            <span class="accent">Deutsche Woche XXVIII</span>
+          </h1>
+          <p class="page-desc">Jelajahi semua kategori lomba dan tunjukkan kemampuan terbaikmu dalam bahasa Jerman. Pilih sesuai jenjangmu!</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Total Lomba</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Kategori</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2024</div>
+              <div class="stat-label">Edisi ke-28</div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-5 d-none d-lg-block">
-          <div class="hero-image">
-            <img src="assets/images/lomba/image.png" alt="Lomba Deutsche Woche">
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="hero-image-wrap" id="heroParallax">
+            <div class="hero-img-container">
+              <div class="hero-img-main" data-depth="0.1">
+                <img src="assets/images/lomba/image.png" alt="Lomba Deutsche Woche XXVIII">
+              </div>
+              <div class="float-card float-card-1" data-depth="0.3">
+                <div class="fc-icon">🏆</div>
+                <div class="fc-text">Siswa & Mahasiswa</div>
+                <div class="fc-sub">Offline & Online</div>
+              </div>
+              <div class="float-card float-card-2" data-depth="0.2">
+                <div class="fc-icon">🎯</div>
+                <div class="fc-text">Daftar Sekarang</div>
+                <div class="fc-sub">Kuota Terbatas</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -655,6 +906,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/parallax.min.js"></script>
 
   <script>
     // ============================================
@@ -683,6 +935,18 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
+    });
+
+    // ============================================
+    // HERO PARALLAX - Interactive with cursor
+    // ============================================
+    $(document).ready(function() {
+      if ($('#heroParallax').length && $.fn.parallax) {
+        $('#heroParallax').parallax({
+          scalarX: 12.0,
+          scalarY: 12.0,
+        });
+      }
     });
 
     // ============================================
