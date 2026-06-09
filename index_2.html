@@ -885,13 +885,11 @@
     // PARALLAX - Mouse Move for Hero Images
     // ============================================
     $(document).ready(function() {
-      // Initialize parallax on the banner image container
-      var bannerScene = document.querySelector('.banner_image_2');
-      if (bannerScene && typeof Parallax !== 'undefined') {
-        new Parallax(bannerScene, {
-          relativeInput: true,
-          hoverOnly: false,
-          inputElement: document.querySelector('.hero-modern')
+      // jQuery parallax plugin - targets elements with data-depth children
+      if ($('.banner_image_2').length && $.fn.parallax) {
+        $('.banner_image_2').parallax({
+          scalarX: 10.0,
+          scalarY: 10.0,
         });
       }
 
