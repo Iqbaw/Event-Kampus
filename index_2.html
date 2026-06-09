@@ -16,17 +16,16 @@
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
   <!-- Custom Redesign -->
-  <link rel="stylesheet" href="assets/css/redesign.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
 
   <!-- Override old styles with redesign priority -->
   <style>
-    /* Reset conflicting old styles */
+    /* Reset conflicting old styles - hide old sections */
     .site_header, .site_footer, .hero_banner, 
     .courses_section, .process_section, .brands_section,
     .calltoaction_section { display: none !important; }
   </style>
-  <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 
 <body>
@@ -55,7 +54,7 @@
   <!-- ============================================
        HERO SECTION - MODERN TYPOGRAPHY
        ============================================ -->
-  <section class="hero-modern" id="home">
+  <section class="hero-modern mouse_move" id="home">
     <div class="hero-grid"></div>
     <div class="container-custom">
       <div class="row align-items-center">
@@ -95,8 +94,27 @@
         </div>
         <div class="col-lg-5 d-none d-lg-block">
           <div class="hero-images">
-            <div class="hero-image-main">
-              <img src="assets/images/banner/hero_banner_img_2.png" alt="Deutsche Woche XXVIII">
+            <div class="banner_image_2">
+              <div class="image_wrap_1">
+                <div class="layer" data-depth="0.1">
+                  <img src="assets/images/banner/hero_banner_img_2.png" alt="Deutsche Woche XXVIII">
+                </div>
+              </div>
+              <div class="child_image image_wrap_2">
+                <div class="layer" data-depth="0.3">
+                  <img src="assets/images/banner/hero_banner_img_3.jpg" alt="Deutsche Woche XXVIII">
+                </div>
+              </div>
+              <div class="child_image image_wrap_3">
+                <div class="layer" data-depth="0.2">
+                  <img src="assets/images/banner/hero_banner_img_4.jpg" alt="Deutsche Woche XXVIII">
+                </div>
+              </div>
+              <div class="child_image image_wrap_4">
+                <div class="layer" data-depth="0.4">
+                  <img src="assets/images/banner/hero_banner_img_5.jpg" alt="Deutsche Woche XXVIII">
+                </div>
+              </div>
             </div>
             <div class="hero-float-card card-1">
               <div class="card-icon">🏆</div>
@@ -382,7 +400,7 @@
       <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight:700; color:var(--gray-900); margin-bottom:48px;">Deutsche Woche XXVIII</h2>
       <div style="max-width:800px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative;">
         <img src="assets/images/video/trailer.jpg" alt="Teaser" style="width:100%;display:block;">
-        <a class="popup_video" href="assets/images/video/unesaa.mp4" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;box-shadow:0 8px 30px rgba(233,69,96,0.4);transition:all 0.3s;">
+        <a class="popup_video" href="assets/images/video/unesaa.mp4" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:20px;box-shadow:0 8px 30px rgba(255,211,2,0.4);transition:all 0.3s;">
           <i class="fas fa-play" style="margin-left:3px;"></i>
         </a>
       </div>
@@ -527,7 +545,7 @@
               <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,2.5rem); font-weight:700; color:var(--gray-900);">Contact Us</h2>
             </div>
             <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
-              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,211,2,0.15);display:flex;align-items:center;justify-content:center;color:var(--dark);flex-shrink:0;">
                 <i class="fas fa-phone"></i>
               </div>
               <div>
@@ -536,7 +554,7 @@
               </div>
             </div>
             <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
-              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,211,2,0.15);display:flex;align-items:center;justify-content:center;color:var(--dark);flex-shrink:0;">
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
@@ -545,7 +563,7 @@
               </div>
             </div>
             <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
-              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,211,2,0.15);display:flex;align-items:center;justify-content:center;color:var(--dark);flex-shrink:0;">
                 <i class="fas fa-location-dot"></i>
               </div>
               <div>
@@ -631,6 +649,8 @@
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/magnific-popup.min.js"></script>
+  <script src="assets/js/parallax.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
 
   <script>
     // ============================================
@@ -872,6 +892,28 @@
           window.scrollTo({ top: pos, behavior: 'smooth' });
         }
       });
+    });
+
+    // ============================================
+    // PARALLAX - Mouse Move for Hero Images
+    // ============================================
+    $(document).ready(function() {
+      if ($('.mouse_move').length) {
+        $('.mouse_move').each(function() {
+          var scene = this;
+          if (typeof Parallax !== 'undefined') {
+            new Parallax(scene, {
+              relativeInput: true,
+              hoverOnly: true
+            });
+          }
+        });
+      }
+
+      // Init WOW animations
+      if (typeof WOW !== 'undefined') {
+        new WOW().init();
+      }
     });
   </script>
 
