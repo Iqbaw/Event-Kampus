@@ -392,138 +392,132 @@
   </section>
 
   <!-- ============================================
-       ABOUT / VIDEO SECTION (kept from original)
+       ABOUT / VIDEO SECTION - INLINE PLAYER
        ============================================ -->
   <section id="about" style="padding: 120px 0; background: var(--gray-50); font-family: var(--font-body);">
     <div class="container-custom text-center">
       <div class="section-label" style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Teaser</div>
       <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight:700; color:var(--gray-900); margin-bottom:48px;">Deutsche Woche XXVIII</h2>
-      <div style="max-width:800px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative;">
-        <img src="assets/images/video/trailer.jpg" alt="Teaser" style="width:100%;display:block;">
-        <a class="popup_video" href="assets/images/video/unesaa.mp4" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:20px;box-shadow:0 8px 30px rgba(255,211,2,0.4);transition:all 0.3s;">
-          <i class="fas fa-play" style="margin-left:3px;"></i>
-        </a>
+      <div style="max-width:800px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative;background:#000;">
+        <video controls playsinline poster="assets/images/video/trailer.jpg" style="width:100%;display:block;border-radius:var(--radius-lg);">
+          <source src="assets/images/video/unesaa.mp4" type="video/mp4">
+          Browser kamu tidak support video tag.
+        </video>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       FAQ SECTION (kept original with style tweaks)
+       FAQ SECTION - MODERN REDESIGN
        ============================================ -->
-  <section id="faq" style="padding: 120px 0; font-family: var(--font-body);">
+  <section class="faq-modern" id="faq">
     <div class="container">
       <div class="text-center" style="margin-bottom: 60px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Bantuan</div>
+        <div class="section-label" style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Bantuan</div>
         <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight:700; color:var(--gray-900);">Pertanyaan Umum</h2>
-        <p style="color: var(--gray-600); max-width:500px; margin: 12px auto 0;">Pertanyaan-pertanyaan yang sering ditanyakan</p>
+        <p style="color: var(--gray-600); max-width:500px; margin: 12px auto 0;">Pertanyaan-pertanyaan yang sering ditanyakan seputar Deutsche Woche XXVIII</p>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col col-lg-6">
-          <div class="accordion" id="faq_accordion_1">
-            <div class="accordion-item">
-              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_one" aria-expanded="true">
-                Topik/Tema yang diangkat oleh Deutsche Woche XXVIII?
-              </div>
-              <div id="collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_1">
-                <div class="accordion-body">
-                  <p class="mb-0">Sprache Als Ausdrucksmittel. Artinya, Bahasa sebagai sarana berekspresi.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_two" aria-expanded="false">
-                Berapa jenis lomba yang ada di Deutsche Woche XXVIII?
-              </div>
-              <div id="collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                <div class="accordion-body">
-                  <p class="mb-0">Ada 7 perlombaan: 3 lomba Siswa, 3 lomba Mahasiswa, dan 1 lomba umum.</p>
-                </div>
+        <div class="col col-lg-10">
+          <div class="faq-grid">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Topik/Tema yang diangkat oleh Deutsche Woche XXVIII?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sprache Als Ausdrucksmittel. Artinya, Bahasa sebagai sarana berekspresi.</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_three" aria-expanded="false">
-                Adakah batasan usia untuk mengikuti perlombaan?
-              </div>
-              <div id="collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                <div class="accordion-body">
-                  <p class="mb-0">Tidak ada. Teman-teman bisa mengikuti lomba sesuai jenjang yang ditentukan.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_four" aria-expanded="false">
-                Apakah semua lomba dilaksanakan secara offline?
-              </div>
-              <div id="collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                <div class="accordion-body">
-                  <p class="mb-0">Tidak. Lomba Mahasiswa dan umum dilaksanakan online. Lomba siswa dilaksanakan offline.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_five" aria-expanded="false">
-                Apakah bisa mengikuti lebih dari satu lomba?
-              </div>
-              <div id="collapse_five" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                <div class="accordion-body">
-                  <p class="mb-0">Tidak. Kami menyarankan peserta untuk tidak mengikuti lebih dari satu lomba.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col col-lg-6">
-          <div class="accordion" id="faq_accordion_2">
-            <div class="accordion-item">
-              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_one" aria-expanded="true">
-                Bolehkah satu sekolah mengirim lebih dari jumlah yg ditentukan?
-              </div>
-              <div id="a2_collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_2">
-                <div class="accordion-body">
-                  <p class="mb-0">Diperbolehkan, namun peserta tidak boleh memilih teks/judul yang sama dengan peserta lainnya.</p>
-                </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Berapa jenis lomba yang ada di Deutsche Woche XXVIII?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Ada 7 perlombaan: 3 lomba Siswa, 3 lomba Mahasiswa, dan 1 lomba umum.</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_two" aria-expanded="false">
-                Apakah perlombaan harus dalam Bahasa Jerman?
-              </div>
-              <div id="a2_collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                <div class="accordion-body">
-                  <p class="mb-0">Ya, kecuali Lomba Musikalisasi Puisi (lomba umum) yang tidak harus menggunakan Bahasa Jerman.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_three" aria-expanded="false">
-                Bagaimana teknis perlombaan dari semua lomba?
-              </div>
-              <div id="a2_collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                <div class="accordion-body">
-                  <p class="mb-0">Teknis perlombaan akan dijelaskan pada Technical Meeting tanggal 02 Oktober 2024.</p>
-                </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Adakah batasan usia untuk mengikuti perlombaan?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Tidak ada. Teman-teman bisa mengikuti lomba sesuai jenjang yang ditentukan.</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_four_b" aria-expanded="false">
-                Kemana harus mengirimkan karya untuk perlombaan?
-              </div>
-              <div id="a2_collapse_four_b" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                <div class="accordion-body">
-                  <p class="mb-0">Karya/video dikumpulkan melalui Google Drive yang disediakan panitia.</p>
-                </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Apakah semua lomba dilaksanakan secara offline?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Tidak. Lomba Mahasiswa dan umum dilaksanakan online. Lomba siswa dilaksanakan offline.</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_five" aria-expanded="false">
-                Siapa yang bisa dihubungi untuk info lebih lanjut?
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Apakah bisa mengikuti lebih dari satu lomba?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Tidak. Kami menyarankan peserta untuk tidak mengikuti lebih dari satu lomba agar kesempatan merata.</p>
               </div>
-              <div id="a2_collapse_five" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                <div class="accordion-body">
-                  <p class="mb-0">Hubungi divisi Humas dan follow Instagram @dwunesa untuk update terbaru.</p>
-                </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Bolehkah satu sekolah mengirim lebih dari jumlah yg ditentukan?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Diperbolehkan, namun peserta tidak boleh memilih teks/judul yang sama dengan peserta lainnya.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Apakah perlombaan harus dalam Bahasa Jerman?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Ya, kecuali Lomba Musikalisasi Puisi (lomba umum) yang tidak harus menggunakan Bahasa Jerman.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Bagaimana teknis perlombaan dari semua lomba?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Teknis perlombaan akan dijelaskan pada Technical Meeting tanggal 02 Oktober 2024.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Kemana harus mengirimkan karya untuk perlombaan?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Karya/video dikumpulkan melalui Google Drive yang disediakan panitia.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Siapa yang bisa dihubungi untuk info lebih lanjut?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Hubungi divisi Humas dan follow Instagram @dwunesa untuk update terbaru.</p>
               </div>
             </div>
           </div>
@@ -869,17 +863,6 @@
     revealElements.forEach(el => generalObserver.observe(el));
 
     // ============================================
-    // VIDEO POPUP
-    // ============================================
-    $(document).ready(function() {
-      $('.popup_video').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        preloader: true
-      });
-    });
-
-    // ============================================
     // SMOOTH SCROLL for anchor links
     // ============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -898,15 +881,13 @@
     // PARALLAX - Mouse Move for Hero Images
     // ============================================
     $(document).ready(function() {
-      if ($('.mouse_move').length) {
-        $('.mouse_move').each(function() {
-          var scene = this;
-          if (typeof Parallax !== 'undefined') {
-            new Parallax(scene, {
-              relativeInput: true,
-              hoverOnly: true
-            });
-          }
+      // Initialize parallax on the banner image container
+      var bannerScene = document.querySelector('.banner_image_2');
+      if (bannerScene && typeof Parallax !== 'undefined') {
+        new Parallax(bannerScene, {
+          relativeInput: true,
+          hoverOnly: false,
+          inputElement: document.querySelector('.hero-modern')
         });
       }
 
