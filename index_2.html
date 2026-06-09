@@ -1,965 +1,879 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Deutsche Woche XXVIII - Sprache als Ausdrucksmittel</title>
+  <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg">
 
-  	<title>Deutsche Woche 2024!</title>
-  	<link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg">
+  <!-- Framework -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
-  	<!-- Framework - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!-- Custom Redesign -->
+  <link rel="stylesheet" href="assets/css/redesign.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Icon Font - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+  <!-- Override old styles with redesign priority -->
+  <style>
+    /* Reset conflicting old styles */
+    .site_header, .site_footer, .hero_banner, 
+    .courses_section, .process_section, .brands_section,
+    .calltoaction_section { display: none !important; }
+  </style>
+  <link rel="stylesheet" href="assets/css/redesign.css">
+</head>
 
-    <!-- Animation - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<body>
 
-    <!-- Cursor - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+  <!-- ============================================
+       FLOATING GLASSMORPHISM NAVBAR
+       ============================================ -->
+  <nav class="navbar-floating" id="mainNav">
+    <a href="index_2.html" class="nav-logo">
+      <img src="assets/images/logo/site_logo-01.png" alt="Deutsche Woche">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#lomba">Lomba</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">F.A.Q</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="semualomba.html" class="nav-cta">Daftar Sekarang</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
 
-    <!-- Carousel - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+  <!-- ============================================
+       HERO SECTION - MODERN TYPOGRAPHY
+       ============================================ -->
+  <section class="hero-modern" id="home">
+    <div class="hero-grid"></div>
+    <div class="container-custom">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Event Terbesar 2024</span>
+            </div>
+            <h1 class="hero-title">
+              Deutsche Woche<br>
+              <span class="title-accent">XXVIII</span>
+            </h1>
+            <p class="hero-subtitle">
+              Melalui tema ini, kami mengundang para peserta untuk mengeksplorasi 
+              beragam aspek ekspresi diri melalui bahasa Jerman dalam kompetisi yang menginspirasi.
+            </p>
+            <p class="hero-theme">
+              <strong>"Sprache als Ausdrucksmittel"</strong> — Bahasa sebagai Sarana untuk Berekspresi
+            </p>
+            <div class="hero-tags">
+              <span class="tag"><i class="fas fa-circle"></i> Nachrichten Lesen</span>
+              <span class="tag"><i class="fas fa-circle"></i> Deutschekenntnisse</span>
+              <span class="tag"><i class="fas fa-circle"></i> Märchen Erzählen</span>
+              <span class="tag"><i class="fas fa-circle"></i> Singen</span>
+              <span class="tag"><i class="fas fa-circle"></i> Musikalisasi Puisi</span>
+            </div>
+            <div class="hero-cta">
+              <a href="semualomba.html" class="btn-primary-hero">
+                <i class="fas fa-rocket"></i> Daftar Lomba
+              </a>
+              <a href="#lomba" class="btn-secondary-hero">
+                <i class="fas fa-arrow-down"></i> Lihat Lomba
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-images">
+            <div class="hero-image-main">
+              <img src="assets/images/banner/hero_banner_img_2.png" alt="Deutsche Woche XXVIII">
+            </div>
+            <div class="hero-float-card card-1">
+              <div class="card-icon">🏆</div>
+              <div class="card-text">7 Kategori Lomba</div>
+              <div class="card-sub">Siswa & Mahasiswa</div>
+            </div>
+            <div class="hero-float-card card-2">
+              <div class="card-icon">🎓</div>
+              <div class="card-text">UNESA 2024</div>
+              <div class="card-sub">Bahasa & Seni</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Video & Image Popup - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+  <!-- ============================================
+       LOMBA SECTION - SWIPEABLE CARDS
+       ============================================ -->
+  <section class="lomba-section" id="lomba">
+    <div class="container-custom">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Kompetisi</div>
+          <h2 class="section-title">Lomba Deutsche Woche</h2>
+        </div>
+        <div class="section-nav">
+          <button class="nav-arrow" id="sliderPrev" aria-label="Previous">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="nav-arrow" id="sliderNext" aria-label="Next">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
 
-    <!-- Vanilla Calendar - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+      <div class="lomba-slider-wrapper">
+        <div class="lomba-slider" id="lombaSlider">
+          <!-- Card 1 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak NL Siswa .png" alt="Nachrichten Lesen">
+              <span class="card-badge">Siswa</span>
+              <span class="card-mode">Offline</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Nachrichten Lesen</h3>
+              <p class="card-desc">Kompetisi membaca berita dalam bahasa Jerman untuk tingkat siswa SMA/SMK sederajat.</p>
+              <a href="lomba.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-    <!-- Custom - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+          <!-- Card 2 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak NL Mahasiswa .png" alt="NL Mahasiswa">
+              <span class="card-badge">Mahasiswa</span>
+              <span class="card-mode">Online</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Nachrichten Lesen</h3>
+              <p class="card-desc">Kompetisi membaca berita dalam bahasa Jerman untuk tingkat mahasiswa se-Indonesia.</p>
+              <a href="lomba2.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
+          <!-- Card 3 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak DK Mahasiswa.png" alt="Deutschekenntnisse">
+              <span class="card-badge">Mahasiswa</span>
+              <span class="card-mode">Online</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Deutschkenntnisse</h3>
+              <p class="card-desc">Uji kemampuan pengetahuan bahasa Jerman untuk tingkat mahasiswa se-Indonesia.</p>
+              <a href="lomba3.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
+          <!-- Card 4 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak DK Siswa .png" alt="DK Siswa">
+              <span class="card-badge">Siswa</span>
+              <span class="card-mode">Offline</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Deutschkenntnisse</h3>
+              <p class="card-desc">Uji kemampuan pengetahuan bahasa Jerman untuk tingkat siswa SMA/SMK sederajat.</p>
+              <a href="lomba4.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-  </head>
+          <!-- Card 5 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak ME Siswa .png" alt="Marchen Erzahlen">
+              <span class="card-badge">Siswa</span>
+              <span class="card-mode">Offline</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Märchen Erzählen</h3>
+              <p class="card-desc">Kompetisi bercerita dongeng dalam bahasa Jerman untuk tingkat siswa SMA/SMK.</p>
+              <a href="lomba5.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
+          <!-- Card 6 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak Singen Mahasiswa .png" alt="Singen">
+              <span class="card-badge">Mahasiswa</span>
+              <span class="card-mode">Online</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Singen</h3>
+              <p class="card-desc">Kompetisi menyanyi lagu berbahasa Jerman untuk tingkat mahasiswa se-Indonesia.</p>
+              <a href="lomba7.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-  <body>
+          <!-- Card 7 -->
+          <div class="lomba-card">
+            <div class="card-image">
+              <img src="assets/images/lomba/Juklak Lomba Umum .png" alt="Musikalisasi Puisi">
+              <span class="card-badge">Umum</span>
+              <span class="card-mode">Online</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Lomba Musikalisasi Puisi</h3>
+              <p class="card-desc">Kompetisi musikalisasi puisi terbuka untuk umum dari seluruh Indonesia.</p>
+              <a href="lomba6.html" class="card-action">
+                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Body Wrap - Start -->
-    <div class="page_wrapper">
+      <div class="slider-dots" id="sliderDots"></div>
 
-      <!-- Back To Top - Start -->
-      <div class="backtotop">
-        <a href="#" class="scroll">
-          <i class="far fa-arrow-up"></i>
+      <div class="text-center">
+        <a href="semualomba.html" class="view-all-btn">
+          Lihat Semua Lomba <i class="fas fa-arrow-right"></i>
         </a>
       </div>
-      <!-- Back To Top - End -->
+    </div>
+  </section>
 
-      <!-- Site Header - Start
-      ================================================== -->
-      <header class="site_header site_header_2">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col col-lg-3 col-5">
-              <div class="site_logo">
-                <a class="site_link" href="index_2.html">
-                  <img src="assets/images/logo/site_logo-01.png" alt="">
-                </a>
+  <!-- ============================================
+       TIMELINE SECTION - HORIZONTAL
+       ============================================ -->
+  <section class="timeline-section" id="timeline">
+    <div class="container-custom">
+      <div class="section-header" style="justify-content: center;">
+        <div class="text-center">
+          <div class="section-label">Jadwal Kegiatan</div>
+          <h2 class="section-title">Timeline Event</h2>
+        </div>
+      </div>
+
+      <div class="timeline-horizontal">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">19 Ags - 16 Sep</div>
+          <div class="timeline-title">Pendaftaran Peserta</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">09 Sep - 11 Sep</div>
+          <div class="timeline-title">Pendaftaran WebNas</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2 Oktober</div>
+          <div class="timeline-title">Technical Meeting</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">08 - 09 Okt</div>
+          <div class="timeline-title">Lomba Online</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">19 Oktober</div>
+          <div class="timeline-title">Puncak Acara (Offline)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY SECTION - FIT & INTERACTIVE
+       ============================================ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container-custom">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Dokumentasi</div>
+          <h2 class="section-title">Gallery</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/gallery/T2.JPG" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/Tenda.JPG" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/Dk.jpg" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/ME1.jpeg" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/Mc.JPG" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/Me2.jpeg" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/Love.JPG" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery/nl.png" alt="Deutsche Woche">
+          <div class="gallery-overlay">
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT / VIDEO SECTION (kept from original)
+       ============================================ -->
+  <section id="about" style="padding: 120px 0; background: var(--gray-50); font-family: var(--font-body);">
+    <div class="container-custom text-center">
+      <div class="section-label" style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Teaser</div>
+      <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight:700; color:var(--gray-900); margin-bottom:48px;">Deutsche Woche XXVIII</h2>
+      <div style="max-width:800px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative;">
+        <img src="assets/images/video/trailer.jpg" alt="Teaser" style="width:100%;display:block;">
+        <a class="popup_video" href="assets/images/video/unesaa.mp4" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;box-shadow:0 8px 30px rgba(233,69,96,0.4);transition:all 0.3s;">
+          <i class="fas fa-play" style="margin-left:3px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ SECTION (kept original with style tweaks)
+       ============================================ -->
+  <section id="faq" style="padding: 120px 0; font-family: var(--font-body);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 60px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Bantuan</div>
+        <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight:700; color:var(--gray-900);">Pertanyaan Umum</h2>
+        <p style="color: var(--gray-600); max-width:500px; margin: 12px auto 0;">Pertanyaan-pertanyaan yang sering ditanyakan</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col col-lg-6">
+          <div class="accordion" id="faq_accordion_1">
+            <div class="accordion-item">
+              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_one" aria-expanded="true">
+                Topik/Tema yang diangkat oleh Deutsche Woche XXVIII?
+              </div>
+              <div id="collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_1">
+                <div class="accordion-body">
+                  <p class="mb-0">Sprache Als Ausdrucksmittel. Artinya, Bahasa sebagai sarana berekspresi.</p>
+                </div>
               </div>
             </div>
-            <div class="col col-lg-6 col-2">
-              <nav class="main_menu navbar navbar-expand-lg">
-                <div class="main_menu_inner collapse navbar-collapse justify-content-center" id="main_menu_dropdown">
-                  <ul class="main_menu_list unordered_list_center">
-                    <li><a class="nav-link" href="#home">Home</a></li>
-                    <li><a class="nav-link" href="#info">Info</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#faq">F.A.Q</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                  </ul>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_two" aria-expanded="false">
+                Berapa jenis lomba yang ada di Deutsche Woche XXVIII?
+              </div>
+              <div id="collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
+                <div class="accordion-body">
+                  <p class="mb-0">Ada 7 perlombaan: 3 lomba Siswa, 3 lomba Mahasiswa, dan 1 lomba umum.</p>
                 </div>
-              </nav>
+              </div>
             </div>
-            <div class="col col-lg-3 col-5">
-              <ul class="header_btns_group unordered_list_end">
-                <li>
-                  <button class="mobile_menu_btn" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu_dropdown" aria-controls="main_menu_dropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="far fa-bars"></i>
-                    </span>
-                  </a>
-                </li>
-              </ul>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_three" aria-expanded="false">
+                Adakah batasan usia untuk mengikuti perlombaan?
+              </div>
+              <div id="collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
+                <div class="accordion-body">
+                  <p class="mb-0">Tidak ada. Teman-teman bisa mengikuti lomba sesuai jenjang yang ditentukan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_four" aria-expanded="false">
+                Apakah semua lomba dilaksanakan secara offline?
+              </div>
+              <div id="collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
+                <div class="accordion-body">
+                  <p class="mb-0">Tidak. Lomba Mahasiswa dan umum dilaksanakan online. Lomba siswa dilaksanakan offline.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_five" aria-expanded="false">
+                Apakah bisa mengikuti lebih dari satu lomba?
+              </div>
+              <div id="collapse_five" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
+                <div class="accordion-body">
+                  <p class="mb-0">Tidak. Kami menyarankan peserta untuk tidak mengikuti lebih dari satu lomba.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+
+        <div class="col col-lg-6">
+          <div class="accordion" id="faq_accordion_2">
+            <div class="accordion-item">
+              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_one" aria-expanded="true">
+                Bolehkah satu sekolah mengirim lebih dari jumlah yg ditentukan?
+              </div>
+              <div id="a2_collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_2">
+                <div class="accordion-body">
+                  <p class="mb-0">Diperbolehkan, namun peserta tidak boleh memilih teks/judul yang sama dengan peserta lainnya.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_two" aria-expanded="false">
+                Apakah perlombaan harus dalam Bahasa Jerman?
+              </div>
+              <div id="a2_collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
+                <div class="accordion-body">
+                  <p class="mb-0">Ya, kecuali Lomba Musikalisasi Puisi (lomba umum) yang tidak harus menggunakan Bahasa Jerman.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_three" aria-expanded="false">
+                Bagaimana teknis perlombaan dari semua lomba?
+              </div>
+              <div id="a2_collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
+                <div class="accordion-body">
+                  <p class="mb-0">Teknis perlombaan akan dijelaskan pada Technical Meeting tanggal 02 Oktober 2024.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_four_b" aria-expanded="false">
+                Kemana harus mengirimkan karya untuk perlombaan?
+              </div>
+              <div id="a2_collapse_four_b" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
+                <div class="accordion-body">
+                  <p class="mb-0">Karya/video dikumpulkan melalui Google Drive yang disediakan panitia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_five" aria-expanded="false">
+                Siapa yang bisa dihubungi untuk info lebih lanjut?
+              </div>
+              <div id="a2_collapse_five" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
+                <div class="accordion-body">
+                  <p class="mb-0">Hubungi divisi Humas dan follow Instagram @dwunesa untuk update terbaru.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION (kept from original)
+       ============================================ -->
+  <section id="contact" style="padding: 120px 0; background: var(--gray-50); font-family: var(--font-body);">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-5">
+          <div class="pe-lg-5">
+            <div style="margin-bottom:40px;">
+              <div style="font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Hubungi Kami</div>
+              <h2 style="font-family: var(--font-display); font-size: clamp(2rem,4vw,2.5rem); font-weight:700; color:var(--gray-900);">Contact Us</h2>
+            </div>
+            <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-display);font-weight:600;font-size:16px;margin-bottom:4px;">Call Us</h4>
+                <p style="color:var(--gray-600);font-size:14px;margin:0;">+62 858-8916-0292 (Nurul Syfa)</p>
+              </div>
+            </div>
+            <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-display);font-weight:600;font-size:16px;margin-bottom:4px;">Email</h4>
+                <p style="color:var(--gray-600);font-size:14px;margin:0;">dwunesa@gmail.com</p>
+              </div>
+            </div>
+            <div style="margin-bottom:24px;display:flex;align-items:flex-start;gap:16px;">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,69,96,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 style="font-family:var(--font-display);font-weight:600;font-size:16px;margin-bottom:4px;">Location</h4>
+                <p style="color:var(--gray-600);font-size:14px;margin:0;">Jl. Raya Kampus Unesa, Lidah Wetan, Kec. Lakarsantri, Surabaya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-lg-7">
+          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.08);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.5610290931688!2d112.66871985842607!3d-7.301673835510472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fd7f3fc45a97%3A0x95e7e96e5b13749!2sGedung%20T2%20Fakultas%20Bahasa%20dan%20Seni%20UNESA!5e0!3m2!1sid!2sid!4v1723943119111!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER - MODERN 2026
+       ============================================ -->
+  <footer class="footer-modern">
+    <div class="container-custom">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index_2.html" class="footer-logo">
+            <img src="assets/images/logo/site_logo-02.png" alt="Deutsche Woche">
+          </a>
+          <p>Deutsche Woche XXVIII dengan tema "Sprache als Ausdrucksmittel" — Bahasa sebagai Sarana untuk Berekspresi. Diselenggarakan oleh Program Studi Bahasa Jerman UNESA.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/dwunesa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:dwunesa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/6285889160292" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lomba">Lomba</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">F.A.Q</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Kompetisi</h4>
+          <ul class="footer-links">
+            <li><a href="lomba.html">Nachrichten Lesen</a></li>
+            <li><a href="lomba3.html">Deutschkenntnisse</a></li>
+            <li><a href="lomba5.html">Märchen Erzählen</a></li>
+            <li><a href="lomba7.html">Singen</a></li>
+            <li><a href="lomba6.html">Musikalisasi Puisi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-heading">Hubungi Kami</h4>
+          <p>Punya pertanyaan? Kirimkan pesan dan kami akan segera merespons.</p>
+          <form class="newsletter-form" action="https://formspree.io/f/mgvwvyoy" method="POST">
+            <input type="email" name="email" placeholder="Email kamu..." required>
+            <button type="submit">Kirim</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Deutsche Woche UNESA &copy; 2024. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/magnific-popup.min.js"></script>
+
+  <script>
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    const navbar = document.getElementById('mainNav');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      });
+    });
+
+    // ============================================
+    // LOMBA SLIDER - AUTO SWIPE
+    // ============================================
+    const slider = document.getElementById('lombaSlider');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dotsContainer = document.getElementById('sliderDots');
     
-      <!-- Site Header - End
-      ================================================== -->
+    let currentSlide = 0;
+    let slidesPerView = 3;
+    let autoSlideInterval;
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
 
-        <!-- Banner Section - Start
-        ================================================== -->
-        <section id="home">
-        <section class="hero_banner style_2 mouse_move" style="background-image: url('assets/images/shape/shape_img_6.svg');">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col col-lg-6">
-                
-                <h1 class="banner_big_title">
-                 Deutsche Woche XXVIII
-                </h1>
-                <p class="banner_description">
-                  Deutsche Woche XXVIII dengan tema “Sprache als Ausdrucksmittel” 
-                  yang artinya “Bahasa sebagai Sarana untuk Berekspresi”. 
-                  Melalui tema ini, kami mengundang para peserta untuk mengeksplorasi 
-                  beragam aspek ekspresi diri mereka. 
-                </p>
-                <ul class="tags_list">
-                  <li>Nachrtitten Lesen</li>
-                  <li>Deutschekenntnisse</li>
-                  <li>Marchen Erzahlen</li>
-                  <li>Singen</li>
-                  <li>Musikalisasi Puisi</li>
-                 
-                </ul>
-              </div>
-              <div class="col col-lg-6">
-                <div class="banner_image_2">
-                  <div class="image_wrap_1">
-                    <div class="layer" data-depth="0.1">
-                      <img src="assets/images/banner/hero_banner_img_2.png" alt="Collab – Online Learning Platform">
-                    </div>
-                  </div>
-                  <div class="child_image image_wrap_2">
-                    <div class="layer" data-depth="0.3">
-                      <img src="assets/images/banner/hero_banner_img_3.jpg" alt="Collab – Online Learning Platform">
-                    </div>
-                  </div>
-                  <div class="child_image image_wrap_3">
-                    <div class="layer" data-depth="0.2">
-                      <img src="assets/images/banner/hero_banner_img_4.jpg" alt="Collab – Online Learning Platform">
-                    </div>
-                  </div>
-                  <div class="child_image image_wrap_4">
-                    <div class="layer" data-depth="0.4">
-                      <img src="assets/images/banner/hero_banner_img_5.jpg" alt="Collab – Online Learning Platform">
-                    </div>
-                  </div>
-                  </div>
-            
-                </div>
-              </section>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Banner Section - End
-        ================================================== -->
+    function updateSlidesPerView() {
+      if (window.innerWidth <= 576) slidesPerView = 1;
+      else if (window.innerWidth <= 992) slidesPerView = 2;
+      else slidesPerView = 3;
+    }
 
-        <!-- Courses Section - Start
-        ================================================== -->
-        <section id="info">
-        <section class="courses_section section_space_lg">
-          
-          <div class="container">
+    function getTotalSlides() {
+      return slider.children.length;
+    }
 
-            
-            <div class="section_heading">
-              <div class="row align-items-center">
-                
-                <div class="col col-md-6">
-                  <h2 class="heading_text mb-0">
-                    Lomba
-                  </h2>
-                </div>
-                <div class="col col-md-6 d-none d-lg-flex justify-content-end">
-                  <div class="btn_wrap p-0">
-                    <a class="btn border_dark" href="semualomba.html">
-                      <span>
-                        <small>Semua Lomba</small>
-                        <small>Semua Lomba</small>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
+    function getMaxSlide() {
+      return Math.max(0, getTotalSlides() - slidesPerView);
+    }
 
-            <div class="row">
-              <div class="col col-lg-4">
-                <div class="course_card style_2">
-                  <div class="item_image">
-                    <a href="lomba.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak NL Siswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Siswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span> Offline</span>
-                      </li>
-                    </ul>          
-                    <h3 class="item_title">
-                      <a href="lomba.html">
-                        Lomba Nachrtitten Lesen
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba.html">
-                      <span class="btn_text">Daftar</span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      const totalDots = getMaxSlide() + 1;
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
 
-              <div class="col col-lg-4 filter-graphic">
-                <div class="course_card style_2">
-                  <div class="item_image">
-                    <a href="lomba3.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak DK Mahasiswa.png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Mahasiswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                      <li>
-                      </li>
-                    </ul>
-                    
-                    <h3 class="item_title">
-                      <a href="lomba3.html">
-                        Lomba Deutschkenntnisse
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba3.html">
-                      <span class="btn_text">Daftar</span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+    function updateDots() {
+      document.querySelectorAll('.slider-dots .dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
 
-              <div class="col col-lg-4 filter-web">
-                <div class="course_card style_2">
-                  <div class="item_image">
-                    <a href="lomba6.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak Lomba Umum .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Umum</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                    </ul>               
-                    <h3 class="item_title">
-                      <a href="lomba6.html">
-                        Lomba Musikalisasi Puisi
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba6.html">
-                      <span class="btn_text">Daftar</span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    function goToSlide(index) {
+      currentSlide = Math.min(Math.max(index, 0), getMaxSlide());
+      const cardWidth = slider.children[0].offsetWidth + 24; // gap
+      slider.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+      updateDots();
+    }
 
-            <div class="btn_wrap d-block d-lg-none pb-0 text-center">
-              <a class="btn border_dark" href="semualomba.html">
-                <span>
-                  <small>Semua Lomba</small>
-                  <small>Semua Lomba</small>
-                </span>
-              </a>
-            </div>
-          </div>
-          </section>
-        </section>
-        <!-- Courses Section - End
-        ================================================== -->
+    function nextSlide() {
+      if (currentSlide >= getMaxSlide()) {
+        goToSlide(0);
+      } else {
+        goToSlide(currentSlide + 1);
+      }
+    }
 
-        <!-- Intro Video Section - Start
-        ================================================== -->
-        <section id="about">
-          <section class="intro_video_section section_space_lg bg_light_2 overflow-hidden decoration_wrap">
-           
-            <div class="container position-relative">
-              <div class="section_heading text-center">
-                <h2 class="heading_text mb-0">
-                  Teaser Deutsche Woche 28
-                </h2>
-              </div>
-              <div class="intro_video">
-                <div class="video_wrap tilt">
-                  <img src="assets/images/video/trailer.jpg" alt="Collab – Online Learning Platform">
-                  <a class="video_play_btn popup_video" href="assets/images/video/unesaa.mp4">
-                    <span class="icon"><i class="fas fa-play"></i></span>
-                  </a>
-                </div>
-              </div>
-              <div class="row">
-              
-                <div class="col col-lg-3 col-md-6 col-sm-6">
-                  <div class="iconbox_item">
-                    <div class="title_wrap">
-                      <div class="item_icon">
-                        <i class="fas fa-signal-2"></i>
-                      </div>
-                      <h3 class="item_title mb-0">
-                        <span class="d-block">Siswa</span>
-                        
-                      </h3>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="col col-lg-3 col-md-6 col-sm-6">
-                  <div class="iconbox_item">
-                    <div class="title_wrap">
-                      <div class="item_icon">
-                        <i class="fas fa-signal-3"></i>
-                      </div>
-                      <h3 class="item_title mb-0">
-                        <span class="d-block">Mahasiswa</span>
-                       
-                      </h3>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="col col-lg-3 col-md-6 col-sm-6">
-                  <div class="iconbox_item">
-                    <div class="title_wrap">
-                      <div class="item_icon">
-                        <i class="fas fa-signal-4"></i>
-                      </div>
-                      <h3 class="item_title mb-0">
-                        <span class="d-block">Umum</span>
-                        
-                      </h3>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-  
-              <div class="deco_item shape_img_1" data-parallax='{"y" : 130, "smoothness": 6}'>
-                <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-              </div>
-              <div class="deco_item shape_img_2" data-parallax='{"y" : -130, "smoothness": 6}'>
-                <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-              </div>
-            </div>
-            <div class="deco_item shape_img_3" data-parallax='{"y" : -130, "smoothness": 6}'>
-              <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-            </div>
-           </section>
-          </section>
-          <!-- Intro Video Section - End
-          ================================================== -->
+    function prevSlide() {
+      if (currentSlide <= 0) {
+        goToSlide(getMaxSlide());
+      } else {
+        goToSlide(currentSlide - 1);
+      }
+    }
 
-        <!-- Process Section - Start
-        ================================================== -->
-        <section class="process_section section_space_lg pb-0">
-          <div class="container">
-            <div class="section_heading text-center">
-              <div class="row justify-content-center">
-                <div class="col col-lg-9">
-                  <h2 class="heading_text mb-0">
-                    Timeline
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="iconbox_item">
-                  <div class="serial_number">19 Ags - 16 Sep</div>
-                  <hr>
-                  <div class="title_wrap">
-                    <h3 class="item_title mb-0">
-                      Pendaftaran
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="iconbox_item">
-                  <div class="serial_number">09 Sep - 11 Sep</div>
-                  <hr>
-                  <div class="title_wrap">
-                    <h3 class="item_title mb-0">
-                      Pendaftaran WebNas (Webinar Nasional)
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="iconbox_item">
-                  <div class="serial_number">2 Oktober  </div>
-                  <hr>
-                  <div class="title_wrap">
-                    <h3 class="item_title mb-0">
-                      Technical Meeting
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="iconbox_item">
-                  <div class="serial_number">08 Okt - 09 Okt</div>
-                  <hr>
-                  <div class="title_wrap">
-                    <h3 class="item_title mb-0">
-                      Pelaksanaan Lomba Online
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="iconbox_item">
-                  <div class="serial_number">19 Oktober</div>
-                  <hr>
-                  <div class="title_wrap">
-                    <h3 class="item_title mb-0">
-                      Pelaksanaan Lomba Offline (Puncak Acara)
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Process Section - End
-        ================================================== -->
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(nextSlide, 4000);
+    }
 
-        <!-- Brands Section - Start
-        ================================================== -->
-        <section class="brands_section section_space_lg pb-0">
-          
-          <div class="calltoaction_section section_space_lg bg_white decoration_wrap">
-          
-          <div class="container">
-            <div class="section_heading text-center">
-              <h2 class="heading_text mb-0">
-                Gallery
-              </h2>
-            </div>
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
 
-            <ul class="brands_logo_list unordered_list">
-              <li>
-                 <a href="assets/images/gallery/T2.JPG" data-lightbox="gallery">
-                    <img src="assets/images/gallery/T2.JPG" alt="Microsoft">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/Tenda.JPG" data-lightbox="gallery">
-                    <img src="assets/images/gallery/Tenda.JPG" alt="Microsoft">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/Dk.JPG" data-lightbox="gallery">
-                    <img src="assets/images/gallery/Dk.JPG" alt="Microsoft">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/ME1.jpeg" data-lightbox="gallery">
-                    <img src="assets/images/gallery/ME1.jpeg" alt="Cisco">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/Mc.JPG" data-lightbox="gallery">
-                    <img src="assets/images/gallery/Mc.JPG" alt="Verizon Communications">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/Me2.jpeg" data-lightbox="gallery">
-                    <img src="assets/images/gallery/Me2.jpeg" alt="Infopulse">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/Love.JPG" data-lightbox="gallery">
-                    <img src="assets/images/gallery/Love.JPG" alt="Amazon">
-                 </a>
-              </li>
-              <li>
-                 <a href="assets/images/gallery/nl.png" data-lightbox="gallery">
-                    <img src="assets/images/gallery/nl.png" alt="Wix">
-                 </a>
-              </li>
-              <li>
-                <a href="assets/images/gallery/T2.JPG" data-lightbox="gallery">
-                   <img src="assets/images/gallery/T2.JPG" alt="Microsoft">
-                </a>
-             </li>
-             <li>
-              <a href="assets/images/gallery/T2.JPG" data-lightbox="gallery">
-                 <img src="assets/images/gallery/T2.JPG" alt="Microsoft">
-              </a>
-           </li>
-           <li>
-            <a href="assets/images/gallery/T2.JPG" data-lightbox="gallery">
-               <img src="assets/images/gallery/T2.JPG" alt="Microsoft">
-            </a>
-         </li>
-           </ul>
-           
-            <div class="deco_item shape_img_1" data-parallax='{"x" : 130, "smoothness": 6}'>
-              <img src="assets/images/shape/shape_img_5.png" alt="Collab – Online Learning Platform">
-            </div>
-            <div class="deco_item shape_img_2" data-parallax='{"x" : -130, "smoothness": 6}'>
-              <img src="assets/images/shape/shape_img_4.png" alt="Collab – Online Learning Platform">
-            </div>
-          </div>
-        </div>
-        </section>
-        <!-- Brands Section - End
-        ================================================== -->
+    // Touch/Swipe support
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      stopAutoSlide();
+    });
 
-        
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const diff = e.touches[0].clientX - startX;
+      if (Math.abs(diff) > 10) e.preventDefault();
+    }, { passive: false });
 
-        
-<!-- FAQ Section - Start
-        ================================================== -->
-        <section id="faq">
-        <section class="faq_section section_space_lg">
-          <div class="container">
-            <div class="section_heading text-center mb-3">
-              <div class="row justify-content-center">
-                <div class="col col-lg-7">
-                  <h2 class="heading_text">
-                    F.A.Q
-                  </h2>
-                  <p class="heading_description mb-0">
-                   Pertanyaan-pertanyaan yang sering ditanyakan
-                  </p>
-                </div>
-              </div>
-            </div>
+    slider.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (diff > 50) nextSlide();
+      else if (diff < -50) prevSlide();
+      startAutoSlide();
+    });
 
-            <div class="row justify-content-center">
-              <div class="col col-lg-6">
-                <div class="accordion" id="faq_accordion_1">
-                  <div class="accordion-item">
-                    <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_one" aria-expanded="true">
-                      Topik/Tema yang diangkat oleh Deutsche Woche XXVIII kali ini?
-                    </div>
-                    <div id="collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_1">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Sprache Als Ausdrucksmittel. Artinya, Bahasa sebagai sarana berekspresi.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_two" aria-expanded="false">
-                      Berapa jenis lomba yang ada di Deutsche Woche XXVIII kali ini?
-                    </div>
-                    <div id="collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          perlombaan pada Deutsche Woche XXVIII kali ini ada 7. Yang terdiri dari 3 lomba Siswa, 3 lomba Mahasiswa, dan 1 lomba umum
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_three" aria-expanded="false">
-                      Adakah batasan usia untuk mengikuti perlombaan ini? 
-                    </div>
-                    <div id="collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Tidak ada yaa, teman teman bisa mengikuti lomba yang sesuai dengan jenjang yang telah ditentukan.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_four" aria-expanded="false">
-                      Apakah semua lomba nantinya akan dilaksanakan secara offline?
+    // Mouse drag support
+    slider.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      slider.style.cursor = 'grabbing';
+      stopAutoSlide();
+    });
 
-                    </div>
-                    <div id="collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Tidak, untuk lomba Mahasiswa dan umum semuanya akan dilaksanakan secara online. Lalu untuk lomba siswa akan dilaksanakan secara offline.
+    document.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      slider.style.cursor = 'grab';
+      const diff = startX - e.clientX;
+      if (diff > 50) nextSlide();
+      else if (diff < -50) prevSlide();
+      startAutoSlide();
+    });
 
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_four" aria-expanded="false">
-                      Apakah bisa mengikuti lebih dari satu lomba?
-                    </div>
-                    <div id="collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_1">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Tidak boleh ya, kami menyarankan kepada para peserta untuk tidak mengikuti lebih dari satu lomba agar teman teman yg lainnya bisa berkesempatan untuk mengikuti perlombaan di Deutsche Woche XXVIII.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    prevBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); startAutoSlide(); });
+    nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); startAutoSlide(); });
 
-              <div class="col col-lg-6">
-                <div class="accordion" id="faq_accordion_2">
-                  <div class="accordion-item">
-                    <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_one" aria-expanded="true">
-                      Apakah diperbolehkan jika satu sekolah mengirimkan perwakilan lebih dari jumlah yg ditentukan? 
-                    </div>
-                    <div id="a2_collapse_one" class="accordion-collapse collapse show" data-bs-parent="#faq_accordion_2">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Diperbolehkan, namun untuk perlombaan Märchen Erzählen dan Nachrichten Lesen (siswa) peserta tidak diperbolehkan memilih teks/judul yang sama dengan peserta lainnya.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_two" aria-expanded="false">
-                      Apakah perlombaan yang diikuti pada Deutsche Woche XXVIII ini harus dalam Bahasa Jerman?
-                    </div>
-                    <div id="a2_collapse_two" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Tentu saja, perlombaan yang tidak perlu menggunakan Bahasa Jerman adalah Lomba Musikalisasi puisi (lomba umum)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_three" aria-expanded="false">
-                      Bagaimana teknis perlombaan dari semua lomba yang ada di Deustche Woche XXVII? 
-                    </div>
-                    <div id="a2_collapse_three" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Untuk teknis perlombaan dari semua jenis lomba di Deutsche Woche XXVIII akan dijelaskan pada saat Technical Meeting (TM) pada tanggal 02 Oktober 2024. Nantinya akan ada pembahasan secara lengkap mengenai semua teknis perlombaan.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_four" aria-expanded="false">
-                      Kemana saya harus mengirimkan karya saya untuk mengikuti perlombaan ini?
-                    </div>
-                    <div id="a2_collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Pada perlombaan Singen dan Musikalisasi puisi, karya/video akan dikumpulkann melalui Google Drive yang telah disediakan panitia.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#a2_collapse_four" aria-expanded="false">
-                      Siapa yang bisa saya hubungi untuk menanyakan informasi lebih lanjut terkait Deutsche Woche XXVII?
+    // Init slider
+    updateSlidesPerView();
+    createDots();
+    startAutoSlide();
 
-                    </div>
-                    <div id="a2_collapse_four" class="accordion-collapse collapse" data-bs-parent="#faq_accordion_2">
-                      <div class="accordion-body">
-                        <p class="mb-0">
-                          Untuk informasi lebih lanjut mengenai Deutsche Woche XXVIII akan disampaikan oleh panitia dari divisi Humas. Dan jangan lupa, pantengin terus official Instagram Deutsche Woche XXVIII (@dwunesa).
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        </section>
-        <!-- FAQ Section - End
-        ================================================== -->
-        
+    window.addEventListener('resize', () => {
+      updateSlidesPerView();
+      createDots();
+      goToSlide(Math.min(currentSlide, getMaxSlide()));
+    });
+
+    // Pause auto slide on hover
+    slider.parentElement.addEventListener('mouseenter', stopAutoSlide);
+    slider.parentElement.addEventListener('mouseleave', startAutoSlide);
+
+    // ============================================
+    // GALLERY - SCROLL REVEAL ANIMATION
+    // ============================================
+    const galleryItems = document.querySelectorAll('.gallery-item');
     
-        <!-- Contact Section - Start
-        ================================================== -->
-        <section id="contact">
-        <section  class="contact_section section_space_lg">
-          <div class="container">
-            <div class="row">
-              <div class="col col-lg-5">
-                <div class="pe-lg-5">
-                  <div class="section_heading">
-                    <h2 class="heading_text">
-                      Contact Us
-                    </h2>
-                    <p class="heading_description mb-0">
-                     Hubungi kami
-                    </p>
-                  </div>
-                  <div class="iconbox_item contact_info_iconbox">
-                    <div class="item_icon">
-                      <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="item_content">
-                      <h3 class="item_title">Call Us</h3>
-                      <p class="mb-0">+62 858-8916-0292 (Nurul Syfa) </p>
-                      
-                    </div>
-                  </div>
-                  <div class="iconbox_item contact_info_iconbox">
-                    <div class="item_icon">
-                      <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="item_content">
-                      <h3 class="item_title">Email Address</h3>
-                      <p class="mb-0">dwunesa@gmail.com</p>
-                      
-                    </div>
-                  </div>
-                  <div class="iconbox_item contact_info_iconbox">
-                    <div class="item_icon">
-                      <i class="fas fa-location-dot"></i>
-                    </div>
-                    <div class="item_content">
-                      <h3 class="item_title">Reach Us</h3>
-                      <p class="mb-0"> Jl. Raya Kampus Unesa, Lidah Wetan, Kec. Lakarsantri, Surabaya, Jawa Timur </p>
-                     
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-7">
-                <div class="gmap_canvas">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.5610290931688!2d112.66871985842607!3d-7.301673835510472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fd7f3fc45a97%3A0x95e7e96e5b13749!2sGedung%20T2%20Fakultas%20Bahasa%20dan%20Seni%20UNESA!5e0!3m2!1sid!2sid!4v1723943119111!5m2!1sid!2sid" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </section>
-        </section>
-        <!-- Contact Section - End
-        ================================================== -->
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-        <!-- Contact Form Section - Start
-        ================================================== -->
-        <section class="contact_form_section section_space_lg bg_light decoration_wrap overflow-hidden">
-          <div class="container decoration_wrap">
-            <div class="row justify-content-center">
-              <div class="col col-lg-7">
-                <div class="section_heading text-center">
-                  <h2 class="heading_text mb-0">
-                    Contact Our Team to Know What You Want
-                  </h2>
-                </div>
-              </div>
-            </div>
+    galleryItems.forEach(item => revealObserver.observe(item));
 
-            <form id="my-form" action="https://formspree.io/f/mgvwvyoy" method="POST">
-              <div class="row justify-content-center">
-                <div class="col col-lg-8">
-                  <div class="row">
-                    <div class="col col-md-6">
-                      <div class="form_item m-0">
-                        <label for="input_name" class="input_title">Name</label>
-                        <input id="input_name" type="text" name="name" placeholder="Your Name" required>
-                      </div>
-                    </div>
-                    <div class="col col-md-6">
-                      <div class="form_item m-0">
-                        <label for="input_email" class="input_title">Email</label>
-                        <input id="input_email" type="email" name="email" placeholder="Your Email" required>
-                      </div>
-                    </div>
-                    <div class="col col-md-6">
-                      <div class="form_item m-0">
-                        <label for="input_phone" class="input_title">Phone</label>
-                        <input id="input_phone" type="tel" name="telephone" placeholder="Your Phone" required>
-                      </div>
-                    </div>
-                    <div class="col col-md-6">
-                      <div class="form_item m-0">
-                        <label for="input_subject" class="input_title">Subject</label>
-                        <input id="input_subject" type="tel" name="subject" placeholder="Your Subject" required>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="form_item">
-                        <label for="input_message" class="input_title">Message</label>
-                        <textarea id="input_message" name="message" placeholder="Type Your Message" required></textarea>
-                      </div>
-                      <button type="submit" class="btn btn_dark w-100 b-block">
-                        <span>
-                          <small>Send Your Message</small>
-                          <small>Send Your Message</small>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+    // Gallery lightbox click
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (img) {
+          $.magnificPopup.open({
+            items: { src: img.src, type: 'image' },
+            closeBtnInside: true,
+            mainClass: 'mfp-fade'
+          });
+        }
+      });
+    });
 
-            <div class="deco_item shape_img_1 wow fadeInUp" data-wow-delay=".2s">
-              <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-            </div>
-            <div class="deco_item shape_img_2 wow fadeInUp" data-wow-delay=".4s">
-              <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-            </div>
-          </div>
+    // ============================================
+    // GENERAL SCROLL REVEAL
+    // ============================================
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const generalObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => generalObserver.observe(el));
 
-          <div class="deco_item shape_img_3 wow fadeInLeft" data-wow-delay=".2s">
-            <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-          </div>
-          <div class="deco_item shape_img_4 wow fadeInRight" data-wow-delay=".4s">
-            <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-          </div>
-        </section>
-        <!-- Contact Form Section - End
-        ================================================== -->
+    // ============================================
+    // VIDEO POPUP
+    // ============================================
+    $(document).ready(function() {
+      $('.popup_video').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        preloader: true
+      });
+    });
 
+    // ============================================
+    // SMOOTH SCROLL for anchor links
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 100;
+          const pos = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 
-      <!-- Site Footer - Start
-      ================================================== -->
-      <footer class="site_footer">
-        <div class="footer_widget_area">
-          <div class="container">
-            <div class="row">
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="footer_widget">
-                  <div class="site_logo">
-                    <a class="site_link" href="index.html">
-                      <img src="assets/images/logo/site_logo-02.png" alt="Collab - Online Learning Platform">
-                    </a>
-                  </div>
-                  <p>
-                    Deutsche Woche XXVIII dengan tema “Sprache als Ausdrucksmittel” yang artinya “Bahasa sebagai Sarana untuk Berekspresi”.
-                  </p> 
-                  <ul class="social_links unordered_list">
-                  
-                    <li>
-                      <a href="#!"><i class="fab fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-                <div class="col col-lg-6">
-                </div>
-                <div class="col col-lg-3 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                      <h3 class="footer_widget_title">Our Team</h3>
-                      <ul class="blog_small_group unordered_list_block">
-                          <li>
-                              <a class="blog_small">
-                                  <span class="item_image">
-                                      <img src="assets\images\team\iqbal.jpg" alt="Collab – Online Learning Platform">
-                                  </span>
-                                  <span class="item_content">
-                                      <strong class="item_title">Iqbal Al Batmi</strong>
-                                      <small class="item_post_date">Front End Web developer</small>
-                                      <!-- Social icons placed below the title -->
-                                      <span class="item_social_icons social_links ">
-                                          <a href="https://x.com/elbatmee" target="_blank"><i class="fab fa-twitter"></i></a>
-                                          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                          <a href="https://www.instagram.com/ibbat.alqalmi" target="_blank"><i class="fab fa-instagram"></i></a>
-                                      </span>
-                                  </span>
-                              </a>
-                          </li>
-                          <li>
-                              <a class="blog_small" >
-                                  <span class="item_image">
-                                      <img src="assets/images/team/rama.jpg" alt="Collab – Online Learning Platform">
-                                  </span>
-                                  <span class="item_content">
-                                      <strong class="item_title">Ramadhani Rizky </strong>
-                                      <small class="item_post_date">Front End Web developer</small>
-                                      <!-- Social icons placed below the title -->
-                                      <span class="item_social_icons">
-                                          <a href="https://www.linkedin.com/in/ramadhani-rizky/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                          <a href="https://www.instagram.com/r.rizky.s/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                      </span>
-                                  </span>
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="copyright_widget">
-          <div class="container">
-            <p class="copyright_text text-center mb-0">
-              DW UNESA</a> © All rights reserved 2024
-            </p>
-          </div>
-        </div>
-      </footer>
-      <!-- Site Footer - End
-      ================================================== -->
-
-
-    <!-- Body Wrap - End -->
-
-    <!-- Framework - Jquery Include -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
-
-    <!-- animation - jquery include -->
-    <script src="assets/js/cursor.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/tilt.min.js"></script>
-    <script src="assets/js/parallax.min.js"></script>
-    <script src="assets/js/parallax-scroll.js"></script>
-
-    <!-- Carousel - Jquery Include -->
-    <script src="assets/js/slick.min.js"></script>
-
-    <!-- Video & Image Popup - Jquery Include -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-
-    <!-- Counter Up - Jquery Include -->
-    <script src="assets/js/waypoint.js"></script>
-    <script src="assets/js/counterup.min.js"></script>
-
-    <!-- Countdown Timer - jquery include -->
-    <script src="assets/js/countdown.js"></script>
-
-    <!-- Vanilla Calendar - Jquery Include -->
-    <script src="assets/js/vanilla-calendar.min.js"></script>
-
-    <!-- Custom - Jquery Include -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/form.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
-
-
-  </body>
+</body>
 </html>
