@@ -1,518 +1,737 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Semua Lomba - Deutsche Woche XXVIII</title>
+  <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg">
 
-    <title>Semua Lomba</title>
-    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg">
+  <!-- Framework -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
 
-    <!-- Framework - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
 
-    <!-- Icon Font - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+  <style>
+    /* Hide old elements */
+    .site_header, .site_footer { display: none !important; }
 
-    <!-- Animation - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    /* Page Hero Banner */
+    .page-hero {
+      background: #ffd302;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
 
-    <!-- Cursor - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 60%;
+      height: 140%;
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
 
-    <!-- Carousel - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    .page-hero .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
 
-    <!-- Video & Image Popup - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    .page-hero .breadcrumb-nav a {
+      color: var(--dark);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
 
-    <!-- Vanilla Calendar - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+    .page-hero .breadcrumb-nav a:hover {
+      opacity: 1;
+    }
 
-    <!-- Custom - CSS Include -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+    .page-hero .breadcrumb-nav .separator {
+      opacity: 0.4;
+    }
 
-  </head>
+    .page-hero .breadcrumb-nav .current {
+      font-weight: 600;
+      color: var(--dark);
+    }
 
+    .page-hero .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
 
-  <body>
+    .page-hero .page-desc {
+      font-size: 16px;
+      color: rgba(31, 29, 13, 0.7);
+      max-width: 500px;
+      line-height: 1.7;
+    }
 
-    <!-- Body Wrap - Start -->
-    <div class="page_wrapper">
+    .page-hero .hero-image {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
 
-      <!-- Back To Top - Start -->
-      <div class="backtotop">
-        <a href="#" class="scroll">
-          <i class="far fa-arrow-up"></i>
-        </a>
+    .page-hero .hero-image img {
+      max-width: 320px;
+      width: 100%;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Filter Bar */
+    .filter-section {
+      padding: 80px 0 0;
+      background: var(--gray-50);
+    }
+
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: 1.5px solid var(--gray-300);
+      background: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-700);
+      cursor: pointer;
+      transition: all 0.3s var(--transition-smooth);
+      font-family: var(--font-body);
+    }
+
+    .filter-tab:hover {
+      border-color: var(--accent);
+      color: var(--dark);
+    }
+
+    .filter-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .filter-count {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+
+    .filter-count span {
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+
+    /* Lomba Grid */
+    .lomba-grid-section {
+      padding: 0 0 100px;
+      background: var(--gray-50);
+    }
+
+    .lomba-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 992px) {
+      .lomba-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 576px) {
+      .lomba-grid { grid-template-columns: 1fr; }
+    }
+
+    .lomba-card-v2 {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.4s var(--transition-smooth);
+      position: relative;
+    }
+
+    .lomba-card-v2:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border-color: var(--accent);
+    }
+
+    .lomba-card-v2 .card-img {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .lomba-card-v2 .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--transition-smooth);
+    }
+
+    .lomba-card-v2:hover .card-img img {
+      transform: scale(1.06);
+    }
+
+    .lomba-card-v2 .card-badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lomba-card-v2 .badge-level {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+
+    .lomba-card-v2 .badge-mode {
+      background: var(--accent);
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .lomba-card-v2 .card-content {
+      padding: 24px;
+    }
+
+    .lomba-card-v2 .card-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .lomba-card-v2 .card-category i {
+      color: var(--accent);
+      font-size: 8px;
+    }
+
+    .lomba-card-v2 .card-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .lomba-card-v2 .card-name a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .lomba-card-v2 .card-name a:hover {
+      color: var(--dark);
+    }
+
+    .lomba-card-v2 .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    .lomba-card-v2 .card-meta i {
+      margin-right: 4px;
+      color: var(--accent);
+    }
+
+    .lomba-card-v2 .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      background: var(--dark);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s var(--transition-smooth);
+    }
+
+    .lomba-card-v2 .card-btn:hover {
+      background: #2a2810;
+      transform: translateX(3px);
+      color: var(--accent);
+    }
+
+    .lomba-card-v2 .card-btn i {
+      transition: transform 0.3s;
+    }
+
+    .lomba-card-v2 .card-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background: var(--dark);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-section .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s var(--transition-smooth);
+      box-shadow: 0 4px 20px rgba(255, 211, 2, 0.3);
+    }
+
+    .cta-section .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255, 211, 2, 0.4);
+      background: var(--accent-light);
+      color: var(--dark);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       FLOATING GLASSMORPHISM NAVBAR
+       ============================================ -->
+  <nav class="navbar-floating scrolled" id="mainNav">
+    <a href="index_2.html" class="nav-logo">
+      <img src="assets/images/logo/site_logo-01.png" alt="Deutsche Woche">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index_2.html">Home</a></li>
+      <li><a href="index_2.html#lomba">Lomba</a></li>
+      <li><a href="index_2.html#timeline">Timeline</a></li>
+      <li><a href="index_2.html#gallery">Gallery</a></li>
+      <li><a href="index_2.html#faq">F.A.Q</a></li>
+      <li><a href="index_2.html#contact">Contact</a></li>
+      <li><a href="semualomba.html" class="nav-cta">Daftar Sekarang</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- ============================================
+       PAGE HERO
+       ============================================ -->
+  <section class="page-hero">
+    <div class="container-custom">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="breadcrumb-nav">
+            <a href="index_2.html">Home</a>
+            <span class="separator"><i class="fas fa-chevron-right" style="font-size:10px;"></i></span>
+            <span class="current">Semua Lomba</span>
+          </div>
+          <h1 class="page-title">Semua Lomba</h1>
+          <p class="page-desc">Jelajahi 7 kategori lomba Deutsche Woche XXVIII. Pilih sesuai jenjangmu dan tunjukkan kemampuan terbaikmu!</p>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-image">
+            <img src="assets/images/lomba/image.png" alt="Lomba Deutsche Woche">
+          </div>
+        </div>
       </div>
-      <!-- Back To Top - End -->
-
-     
-      <!-- Site Header - Start
-      ================================================== -->
-      <header class="site_header site_header_1">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col col-lg-3 col-5">
-              <div class="site_logo">
-                <a class="site_link" href="index_2.html">
-                  <img src="assets/images/logo/site_logo-01.png" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="col col-lg-6 col-2">
-              <nav class="main_menu navbar navbar-expand-lg">
-                <div class="main_menu_inner collapse navbar-collapse justify-content-center" id="main_menu_dropdown">
-                  <ul class="main_menu_list unordered_list_center">
-                    <li><a class="nav-link" href="index_2.html">Home</a></li>
-                    <li><a class="nav-link" href="index_2.html">Info</a></li>                   
-                    <li><a class="nav-link" href="index_2.html">About</a></li>
-                    <li><a class="nav-link" href="index_2.html">F.A.Q</a></li>
-                    <li><a class="nav-link" href="index_2.html">Contact</a></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div class="col col-lg-3 col-5">
-              <ul class="header_btns_group unordered_list_end">
-                <li>
-                  <button class="mobile_menu_btn" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu_dropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="far fa-bars"></i>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- Site Header - End
-      ================================================== -->
-
-      <!-- Main Body - Start
-      ================================================== -->
-      <main class="page_content">
-        <!-- Page Section - Start
-        ================================================== -->
-        <section class="page_banner">
-          <div class="container">
-            <div class="content_wrapper">
-              <div class="row align-items-center">
-                <div class="col col-lg-7">
-                  <ul class="breadcrumb_nav unordered_list">
-                    <li><a href="index.html">Home</a></li>
-                    <li> Lomba</li>
-                  </ul>
-                  <h1 class="page_title">
-                    Semua Lomba 
-                  </h1>
-                </div>
-                <div class="col col-lg-5">
-                  <div class="image_widget page_banner_image">
-                    <img src="assets/images/lomba/image.png" alt="Collab – Online Learning Platform">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Page Section - End
-        ================================================== -->
-
-        <!-- Courses Archive Section - Start
-        ================================================== -->
-        <section class="courses_archive_section section_space_lg">
-          <div class="container">
-            <div class="filter_topbar">
-              <p class="filter_result">Showing <span>1-7</span> of <span>7</span> results</p>
-            </div>
-            <div class="row">
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak NL Siswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Siswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Offline</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba.html">
-                        Lomba Nachrtitten Lesen
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba1.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak DK Siswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Siswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Offline</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba1.html">
-                        Lomba Deutschekenntnisse
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba1.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba2.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak ME Siswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Siswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Offline</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba2.html">
-                        Lomba Marchen Erzahlen
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba2.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba3.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak NL Mahasiswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Mahasisiswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba3.html">
-                        Lomba Nachrtitten Lesen
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba3.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba4.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak DK Mahasiswa.png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Mahasiswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba4.html">
-                        Lomba Deutschekenntnisse
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba4.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba5.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak Singen Mahasiswa .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Mahasiswa</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba5.html">
-                        Lomba Singen
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba5.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="course_card">
-                  <div class="item_image">
-                    <a href="lomba6.html" data-cursor-text="View">
-                      <img src="assets/images/lomba/Juklak Lomba Umum .png" alt="Collab – Online Learning Platform">
-                    </a>
-                  </div>
-                  <div class="item_content">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                    </div>
-                    <ul class="meta_info_list unordered_list">
-                      <li>
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Umum</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Online</span>
-                      </li>
-                    </ul>
-                    <h3 class="item_title">
-                      <a href="lomba6.html">
-                        Lomba Musikalisasi Puisi
-                      </a>
-                    </h3>
-                    <a class="btn_unfill" href="lomba6.html">
-                      <span class="btn_text">Daftar </span>
-                      <span class="btn_icon">
-                        <i class="fas fa-long-arrow-right"></i>
-                        <i class="fas fa-long-arrow-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="pagination_wrap">
-              <ul class="pagination_nav unordered_list">
-                <li class="active"><a href="#!">1</a></li>
-
-              </ul>
-            </div>
-          </div>
-        </section>
-        <!-- Courses Archive Section - End
-        ================================================== -->
-      </main>
-      <!-- Main Body - End
-      ================================================== -->
-
-      <!-- Site Footer - Start
-      ================================================== -->
-      <footer class="site_footer">
-        <div class="footer_widget_area">
-          <div class="container">
-            <div class="row">
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="footer_widget">
-                  <div class="site_logo">
-                    <a class="site_link" href="index.html">
-                      <img src="assets/images/logo/site_logo-02.png" alt="Collab - Online Learning Platform">
-                    </a>
-                  </div>
-                  <p>
-                    Deutsche Woche XXVIII dengan tema “Sprache als Ausdrucksmittel” yang artinya “Bahasa sebagai Sarana untuk Berekspresi”.
-                  </p> 
-                  <ul class="social_links unordered_list">
-                  
-                    <li>
-                      <a href="#!"><i class="fab fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-                <div class="col col-lg-6">
-                </div>
-                <div class="col col-lg-3 col-md-6 col-sm-6">
-                  <div class="footer_widget">
-                      <h3 class="footer_widget_title">Our Team</h3>
-                      <ul class="blog_small_group unordered_list_block">
-                          <li>
-                              <a class="blog_small">
-                                  <span class="item_image">
-                                      <img src="assets\images\team\iqbal.jpg" alt="Collab – Online Learning Platform">
-                                  </span>
-                                  <span class="item_content">
-                                      <strong class="item_title">Iqbal Al Batmi</strong>
-                                      <small class="item_post_date">Front End Web developer</small>
-                                      <!-- Social icons placed below the title -->
-                                      <span class="item_social_icons social_links ">
-                                          <a href="https://x.com/elbatmee" target="_blank"><i class="fab fa-twitter"></i></a>
-                                          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                          <a href="https://www.instagram.com/ibbat.alqalmi" target="_blank"><i class="fab fa-instagram"></i></a>
-                                      </span>
-                                  </span>
-                              </a>
-                          </li>
-                          <li>
-                              <a class="blog_small" >
-                                  <span class="item_image">
-                                      <img src="assets/images/team/rama.jpg" alt="Collab – Online Learning Platform">
-                                  </span>
-                                  <span class="item_content">
-                                      <strong class="item_title">Ramadhani Rizky </strong>
-                                      <small class="item_post_date">Front End Web developer</small>
-                                      <!-- Social icons placed below the title -->
-                                      <span class="item_social_icons">
-                                          <a href="https://www.linkedin.com/in/ramadhani-rizky/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                          <a href="https://www.instagram.com/r.rizky.s/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                      </span>
-                                  </span>
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="copyright_widget">
-          <div class="container">
-            <p class="copyright_text text-center mb-0">
-              DW UNESA</a> © All rights reserved 2024
-            </p>
-          </div>
-        </div>
-      </footer>
-      <!-- Site Footer - End
-      ================================================== -->
-
     </div>
-    <!-- Body Wrap - End -->
+  </section>
 
-    <!-- Framework - Jquery Include -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+  <!-- ============================================
+       FILTER + LOMBA GRID
+       ============================================ -->
+  <section class="filter-section">
+    <div class="container-custom">
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">Semua</button>
+          <button class="filter-tab" data-filter="siswa">Siswa</button>
+          <button class="filter-tab" data-filter="mahasiswa">Mahasiswa</button>
+          <button class="filter-tab" data-filter="umum">Umum</button>
+        </div>
+        <div class="filter-count">Menampilkan <span id="countDisplay">7</span> lomba</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- animation - jquery include -->
-    <script src="assets/js/cursor.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/tilt.min.js"></script>
-    <script src="assets/js/parallax.min.js"></script>
-    <script src="assets/js/parallax-scroll.js"></script>
+  <section class="lomba-grid-section">
+    <div class="container-custom">
+      <div class="lomba-grid" id="lombaGrid">
 
-    <!-- Carousel - Jquery Include -->
-    <script src="assets/js/slick.min.js"></script>
+        <!-- Card 1 -->
+        <div class="lomba-card-v2" data-category="siswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak NL Siswa .png" alt="Nachrichten Lesen Siswa">
+            <div class="card-badges">
+              <span class="badge-level">Siswa</span>
+              <span class="badge-mode">Offline</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Siswa</div>
+            <h3 class="card-name"><a href="lomba.html">Lomba Nachrichten Lesen</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-location-dot"></i> Offline</span>
+            </div>
+            <a href="lomba.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <!-- Video & Image Popup - Jquery Include -->
-    <script src="assets/js/magnific-popup.min.js"></script>
+        <!-- Card 2 -->
+        <div class="lomba-card-v2" data-category="siswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak DK Siswa .png" alt="Deutschekenntnisse Siswa">
+            <div class="card-badges">
+              <span class="badge-level">Siswa</span>
+              <span class="badge-mode">Offline</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Siswa</div>
+            <h3 class="card-name"><a href="lomba1.html">Lomba Deutschekenntnisse</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-location-dot"></i> Offline</span>
+            </div>
+            <a href="lomba1.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <!-- Counter Up - Jquery Include -->
-    <script src="assets/js/waypoint.js"></script>
-    <script src="assets/js/counterup.min.js"></script>
+        <!-- Card 3 -->
+        <div class="lomba-card-v2" data-category="siswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak ME Siswa .png" alt="Marchen Erzahlen">
+            <div class="card-badges">
+              <span class="badge-level">Siswa</span>
+              <span class="badge-mode">Offline</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Siswa</div>
+            <h3 class="card-name"><a href="lomba2.html">Lomba Märchen Erzählen</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-location-dot"></i> Offline</span>
+            </div>
+            <a href="lomba2.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <!-- Countdown Timer - jquery include -->
-    <script src="assets/js/countdown.js"></script>
+        <!-- Card 4 -->
+        <div class="lomba-card-v2" data-category="mahasiswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak NL Mahasiswa .png" alt="NL Mahasiswa">
+            <div class="card-badges">
+              <span class="badge-level">Mahasiswa</span>
+              <span class="badge-mode">Online</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Mahasiswa</div>
+            <h3 class="card-name"><a href="lomba3.html">Lomba Nachrichten Lesen</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-video"></i> Online</span>
+            </div>
+            <a href="lomba3.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <!-- Vanilla Calendar - Jquery Include -->
-    <script src="assets/js/vanilla-calendar.min.js"></script>
+        <!-- Card 5 -->
+        <div class="lomba-card-v2" data-category="mahasiswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak DK Mahasiswa.png" alt="DK Mahasiswa">
+            <div class="card-badges">
+              <span class="badge-level">Mahasiswa</span>
+              <span class="badge-mode">Online</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Mahasiswa</div>
+            <h3 class="card-name"><a href="lomba4.html">Lomba Deutschekenntnisse</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-video"></i> Online</span>
+            </div>
+            <a href="lomba4.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <!-- Custom - Jquery Include -->
-    <script src="assets/js/main.js"></script>
+        <!-- Card 6 -->
+        <div class="lomba-card-v2" data-category="mahasiswa">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak Singen Mahasiswa .png" alt="Singen">
+            <div class="card-badges">
+              <span class="badge-level">Mahasiswa</span>
+              <span class="badge-mode">Online</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Mahasiswa</div>
+            <h3 class="card-name"><a href="lomba5.html">Lomba Singen</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Individual</span>
+              <span><i class="fas fa-video"></i> Online</span>
+            </div>
+            <a href="lomba5.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-  </body>
+        <!-- Card 7 -->
+        <div class="lomba-card-v2" data-category="umum">
+          <div class="card-img">
+            <img src="assets/images/lomba/Juklak Lomba Umum .png" alt="Musikalisasi Puisi">
+            <div class="card-badges">
+              <span class="badge-level">Umum</span>
+              <span class="badge-mode">Online</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-category"><i class="fas fa-circle"></i> Kategori Umum</div>
+            <h3 class="card-name"><a href="lomba6.html">Lomba Musikalisasi Puisi</a></h3>
+            <div class="card-meta">
+              <span><i class="fas fa-user-group"></i> Tim / Individual</span>
+              <span><i class="fas fa-video"></i> Online</span>
+            </div>
+            <a href="lomba6.html" class="card-btn">Daftar Lomba <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section">
+    <div class="container-custom">
+      <h2>Siap Berkompetisi?</h2>
+      <p>Tunjukkan kemampuan terbaikmu dalam bahasa Jerman. Daftar sekarang sebelum kuota penuh!</p>
+      <a href="index_2.html#contact" class="cta-btn">
+        <i class="fas fa-paper-plane"></i> Hubungi Panitia
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer-modern">
+    <div class="container-custom">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index_2.html" class="footer-logo">
+            <img src="assets/images/logo/site_logo-02.png" alt="Deutsche Woche">
+          </a>
+          <p>Deutsche Woche XXVIII dengan tema "Sprache als Ausdrucksmittel" — Bahasa sebagai Sarana untuk Berekspresi.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/dwunesa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:dwunesa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/6285889160292" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index_2.html#home">Home</a></li>
+            <li><a href="index_2.html#lomba">Lomba</a></li>
+            <li><a href="index_2.html#timeline">Timeline</a></li>
+            <li><a href="index_2.html#gallery">Gallery</a></li>
+            <li><a href="index_2.html#faq">F.A.Q</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Kompetisi</h4>
+          <ul class="footer-links">
+            <li><a href="lomba.html">Nachrichten Lesen</a></li>
+            <li><a href="lomba3.html">Deutschkenntnisse</a></li>
+            <li><a href="lomba5.html">Singen</a></li>
+            <li><a href="lomba6.html">Musikalisasi Puisi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-heading">Hubungi Kami</h4>
+          <p>Punya pertanyaan? Kirimkan pesan.</p>
+          <form class="newsletter-form" action="https://formspree.io/f/mgvwvyoy" method="POST">
+            <input type="email" name="email" placeholder="Email kamu..." required>
+            <button type="submit">Kirim</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Deutsche Woche UNESA &copy; 2024. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script>
+    // ============================================
+    // NAVBAR
+    // ============================================
+    const navbar = document.getElementById('mainNav');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // ============================================
+    // FILTER TABS
+    // ============================================
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.lomba-card-v2');
+    const countDisplay = document.getElementById('countDisplay');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update active tab
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeInUp 0.5s var(--transition-smooth) both';
+            card.style.animationDelay = (visibleCount * 0.05) + 's';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        countDisplay.textContent = visibleCount;
+      });
+    });
+
+    // ============================================
+    // CARD ENTRANCE ANIMATION
+    // ============================================
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s var(--transition-smooth) both';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card, i) => {
+      card.style.animationDelay = (i * 0.08) + 's';
+      observer.observe(card);
+    });
+  </script>
+
+</body>
 </html>
