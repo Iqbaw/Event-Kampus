@@ -214,13 +214,13 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   background-color: #ffd302;
   background-image: url('../images/shape/shape_img_6.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 152px 0 160px;
+  padding: 152px 0 100px;
 }
 
 .hero-modern::before {
@@ -422,20 +422,24 @@ body {
   position: relative;
   z-index: 2;
   overflow: visible;
+  height: 500px;
   animation: fadeInRight 1s var(--transition-smooth) 0.3s both;
 }
 
 .banner_image_2 {
   position: relative;
   overflow: visible;
+  height: 100%;
 }
 
 .banner_image_2 .image_wrap_1 {
-  margin-bottom: -850px;
+  position: relative;
 }
 
 .banner_image_2 .image_wrap_1 img {
   max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
 }
 
 .banner_image_2 .child_image {
@@ -444,7 +448,7 @@ body {
 }
 
 .banner_image_2 .child_image .layer {
-  max-width: 260px;
+  max-width: 200px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 10px 10px 0 0 var(--dark);
@@ -472,18 +476,18 @@ body {
 }
 
 .banner_image_2 .image_wrap_2 {
-  top: 75px;
-  right: -34%;
+  top: 30px;
+  right: -20%;
 }
 
 .banner_image_2 .image_wrap_3 {
-  top: 26%;
-  right: -42%;
+  top: 35%;
+  right: -25%;
 }
 
 .banner_image_2 .image_wrap_4 {
-  top: 38%;
-  left: -32%;
+  top: 50%;
+  left: -15%;
 }
 
 .hero-float-card {
